@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1494117964 source:/home/aorona/workspace/cpp/GreedyAlgorthims/inputhandler.cpp
+	<fstream>
+	<iostream>
+	<string>
+	<vector>
+
+1494118337 source:/home/aorona/workspace/cpp/GreedyAlgorthims/main.cpp
+	<fstream>
+	<iostream>
+	<string>
+	<vector>
+
