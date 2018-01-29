@@ -1,0 +1,22 @@
+BFS time 2:30
+
+BFS(graph G, start vertex S)
+[all nodes initially unexplored]
+- mark S explored
+- let Q = queue data structure (FIFO), initialized with S
+- while Q unempty:
+  - remove the first node of Q, call it V
+  - for each edge (v,w):
+      - if w unexplored
+      - mark w as explored
+      - add w to Q (at the end)
+
+
+Shortest Path
+
+Goal: Compute distance (v) the fewest # of edges on a path from s to v.
+
+Extra code: - initialize dist(v) = 0 if v = s, +infinity if v not eq. s
+
+- when considering edge (v,w):
+  - if w unexplored, then set dist(w) = dist(v) + 1
