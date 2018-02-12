@@ -25,7 +25,7 @@ class BinarySearchTree():
   
     def find(self, key):
         root = self.root
-        while root != None:
+        while root is not None:
             if key < root.element:
                 root = root.leftChild
             elif key > root.element:
@@ -39,7 +39,7 @@ class BinarySearchTree():
 
   
     def findMin(self, root):
-        while root.leftChild != None:
+        while root.leftChild is not None:
             root = root.leftChild
         while root.deleted == True:
             root = root.parent
@@ -47,7 +47,7 @@ class BinarySearchTree():
 
 
     def findMax(self, root):
-        while root.rightChild != None:
+        while root.rightChild is not None:
             root = root.rightChild
         while root.deleted == True:
             root = root.parent
@@ -69,7 +69,7 @@ class BinarySearchTree():
                 return
 
             if element < node.element:
-                if node.leftChild == None:
+                if node.leftChild is None:
                     node.leftChild = self.TreeNode.makeLeaf(node, element)
                     self.size += 1
                     return
@@ -77,7 +77,7 @@ class BinarySearchTree():
                     node = node.leftChild
 
             else:
-                if node.rightChild == None:
+                if node.rightChild is None:
                     node.rightChild = self.TreeNode.makeLeaf(node, element)
                     self.size += 1
                     return
@@ -98,7 +98,7 @@ class BinarySearchTree():
 
     def _remove(self, root, element):
         # Base / Escape Case
-        if root == None:
+        if root is None:
             return root
 
         if element < root.element:
@@ -123,31 +123,31 @@ class BinarySearchTree():
 
 
     def _inOrderTraversal(self, nodes, root):
-        if root.leftChild != None:
+        if root.leftChild is not None:
             self._inOrderTraversal(nodes, root.leftChild)
-        if root != None:
+        if root is not None:
             nodes.append(root.element)
-        if root.rightChild != None:
+        if root.rightChild is not None:
             self._inOrderTraversal(nodes, root.rightChild)
         return nodes
 
 
     def _preOrderTraversal(self, nodes, root):
-        if root != None:
+        if root is not None:
             nodes.append(root.element)
-        if root.leftChild != None:
+        if root.leftChild is not None:
             self._preOrderTraversal(nodes, root.leftChild)
-        if root.rightChild != None:
+        if root.rightChild is not None:
             self._preOrderTraversal(nodes, root.rightChild)
         return nodes
 
 
     def _postOrderTraversal(self, nodes, root):
-        if root.leftChild != None:
+        if root.leftChild is not None:
             self._postOrderTraversal(nodes, root.leftChild)
-        if root.rightChild != None:
+        if root.rightChild is not None:
             self._postOrderTraversal(nodes, root.rightChild)
-        if root.element != None:
+        if root.element is not None:
             nodes.append(root.element)
         return nodes
 
