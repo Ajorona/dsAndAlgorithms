@@ -1,0 +1,37 @@
+  def _remove(self, parent, x, element):
+    if x == None:
+      return x
+
+    if element < x.element:
+    	return _remove(x, x.leftChild, element)
+    elif child.element > element:
+    	return _remove(x, x.rightChild, element)
+
+    if x.element == element:
+    	
+
+    	numChildren = (int((x.leftChild != None)) + int((x.rightChild != None)))
+
+	    # Case 0: element to be deleted has no children
+	    if numChildren == 0:
+	    	if parent.element > x.element:
+	    		parent.leftChild = None
+	    	else:
+	    		parent.rightChild = None
+
+	    # Case 1: element to be deleted has one child
+	    elif numChildren == 1:
+	    	if parent.element > x.element:
+	    		parent.leftChild = x.leftChild
+	    	else:
+	    		parent.rightChild = x.rightChild
+
+	    # Case 2: element to be deleted has two children
+		else:
+			if parent.element > x.element:
+	    		parent.leftChild = None
+	    	else:
+	    		parent.rightChild = None
+
+	else:
+		return None
